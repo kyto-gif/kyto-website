@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales – Kyto</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --forest: #24483c;
+      --cream: #fffaf1;
+      --paper: #fffdf8;
+      --sage: #dcebdc;
+      --muted: #58756a;
+      --terracotta: #c66c43;
+      --line: rgba(36, 72, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--cream);
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 16px;
+      color: var(--forest);
+    }
+
+    .legal-page {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 3.5rem) clamp(0.75rem, 3vw, 2rem);
+    }
+
+    .legal-document {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 18px 52px rgba(36, 72, 60, 0.09);
+    }
+
+    .document-header {
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem) clamp(1.25rem, 3vw, 2.25rem);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8 0%, #f2f8ee 100%);
+    }
+
+    .document-marker {
+      width: 42px;
+      height: 5px;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    .legal-title {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      letter-spacing: -0.028em;
+    }
+
+    .document-content {
+      padding: clamp(1.2rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem);
+    }
+
+    .section-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .legal-section {
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-section:first-child {
+      padding-top: 0;
+    }
+
+    .legal-section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      line-height: 1.22;
+    }
+
+    .section-copy {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .document-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 clamp(1.35rem, 5vw, 4.5rem);
+      padding: 1.1rem 0 1.35rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    @media (max-width: 560px) {
+      .legal-page {
+        padding: 0.6rem;
+      }
+
+      .document-header {
+        padding: 1.35rem 1.15rem 1.15rem;
+      }
+
+      .document-content {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .document-footer {
+        margin: 0 1.15rem;
+      }
+
+      .section-copy {
+        line-height: 1.62;
+      }
+    }
+  
+    .section-heading{font-size:1.1rem}
+    .section-copy{font-size:.95rem}
+    .home-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(36,72,60,.2);border-radius:999px;padding:6px 12px;margin-bottom:20px;color:var(--forest);font-weight:600;font-size:13px;text-decoration:none;transition:background .2s}
+    .home-btn:hover{background:rgba(255,255,255,.7)}
+    .home-btn:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
+    .legal-title{font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.15;color:var(--forest)}
+    .update{margin:12px 0 0;color:var(--muted);font-weight:600;font-size:.8rem}
+    .legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:20px;font-size:14px}
+    .legal-nav a{color:var(--muted)}
+    .legal-nav a:hover{color:var(--forest);text-decoration:underline}
+    .document-footer p{margin:0;font-size:.75rem;font-weight:500}
+</style>
+</head>
+<body>
+<main class="legal-page" aria-labelledby="document-title">
+  <article class="legal-document">
+    <header class="document-header">
+      <a class="home-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Accueil</a>
+      <div class="document-marker" aria-hidden="true"></div>
+      <h1 id="document-title" class="legal-title">MENTIONS LÉGALES – KYTO</h1>
+      <p class="update">Dernière mise à jour : 8 octobre 2026</p>
+    </header>
+    <div class="document-content">
+     <ol class="section-list" aria-label="Mentions légales">
+      <li class="legal-section"><h2 class="section-heading">1. Éditeur</h2><p class="section-copy">Le site kytoapp.fr et l’application mobile Kyto sont édités à titre non professionnel par Julien Grisel.
+Contact : contact@kytoapp.fr
+Directeur de la publication : Julien Grisel</p></li>
+      <li class="legal-section"><h2 class="section-heading">2. Hébergement du site</h2><p class="section-copy">Le site kytoapp.fr est hébergé par GitHub, Inc. (GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis – pages.github.com</p></li>
+      <li class="legal-section"><h2 class="section-heading">3. Hébergement des données de l’application</h2><p class="section-copy">Les données de l’application Kyto sont hébergées par Supabase, sur des serveurs situés en France (région de Paris). Pour en savoir plus, consultez notre Politique de Confidentialité (kytoapp.fr/confiden).</p></li>
+      <li class="legal-section"><h2 class="section-heading">4. Propriété intellectuelle</h2><p class="section-copy">Tous les éléments de Kyto (marque, logo, interface, textes, graphismes, code) sont protégés. Toute reproduction non autorisée est interdite.</p></li>
+      <li class="legal-section"><h2 class="section-heading">5. Données personnelles</h2><p class="section-copy">Le traitement des données personnelles est décrit dans la Politique de Confidentialité (kytoapp.fr/confiden). Pour exercer vos droits : contact@kytoapp.fr.</p></li>
+      <li class="legal-section"><h2 class="section-heading">6. Signalement d’un contenu</h2><p class="section-copy">Pour signaler un contenu ou un problème lié au site ou à l’application : contact@kytoapp.fr.</p></li>
+     </ol>
+    </div>
+    <footer class="document-footer"><span class="footer-dot" aria-hidden="true"></span><p>Kyto · Mentions légales</p></footer>
+  </article>
+  <nav class="legal-nav" aria-label="Autres pages">
+    <a href="cgu.html">Conditions générales</a><a href="cgv.html">Conditions de vente</a><a href="confiden.html">Politique de confidentialité</a><a href="contact.html">Nous contacter</a>
+  </nav>
+</main>
+</body></html>

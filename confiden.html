@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de Confidentialité – Kyto</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --forest: #24483c;
+      --cream: #fffaf1;
+      --paper: #fffdf8;
+      --sage: #dcebdc;
+      --muted: #58756a;
+      --terracotta: #c66c43;
+      --line: rgba(36, 72, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--cream);
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 16px;
+      color: var(--forest);
+    }
+
+    .legal-page {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 3.5rem) clamp(0.75rem, 3vw, 2rem);
+    }
+
+    .legal-document {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 18px 52px rgba(36, 72, 60, 0.09);
+    }
+
+    .document-header {
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem) clamp(1.25rem, 3vw, 2.25rem);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8 0%, #f2f8ee 100%);
+    }
+
+    .document-marker {
+      width: 42px;
+      height: 5px;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    .legal-title {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      letter-spacing: -0.028em;
+    }
+
+    .document-content {
+      padding: clamp(1.2rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem);
+    }
+
+    .section-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .legal-section {
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-section:first-child {
+      padding-top: 0;
+    }
+
+    .legal-section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      line-height: 1.22;
+    }
+
+    .section-copy {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .document-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 clamp(1.35rem, 5vw, 4.5rem);
+      padding: 1.1rem 0 1.35rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    @media (max-width: 560px) {
+      .legal-page {
+        padding: 0.6rem;
+      }
+
+      .document-header {
+        padding: 1.35rem 1.15rem 1.15rem;
+      }
+
+      .document-content {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .document-footer {
+        margin: 0 1.15rem;
+      }
+
+      .section-copy {
+        line-height: 1.62;
+      }
+    }
+  
+    .section-heading{font-size:1.1rem}
+    .section-copy{font-size:.95rem;overflow-wrap:anywhere}
+    .home-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(36,72,60,.2);border-radius:999px;padding:6px 12px;margin-bottom:20px;color:var(--forest);font-weight:600;font-size:13px;text-decoration:none;transition:background .2s}
+    .home-btn:hover{background:rgba(255,255,255,.7)}
+    .home-btn:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
+    .legal-title{font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.15;color:var(--forest)}
+    .update{margin:12px 0 0;color:var(--muted);font-weight:600;font-size:.8rem}
+    .legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:20px;font-size:14px}
+    .legal-nav a{color:var(--muted)}
+    .legal-nav a:hover{color:var(--forest);text-decoration:underline}
+    .document-footer p{margin:0;font-size:.75rem;font-weight:500}
+</style>
+</head>
+<body>
+<main class="legal-page" aria-labelledby="document-title">
+  <article class="legal-document">
+    <header class="document-header">
+      <a class="home-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Accueil</a>
+      <div class="document-marker" aria-hidden="true"></div>
+      <h1 id="document-title" class="legal-title">POLITIQUE DE CONFIDENTIALITÉ – KYTO</h1>
+      <p class="update">Dernière mise à jour : 8 octobre 2026</p>
+    </header>
+    <div class="document-content">
+     <ol class="section-list" aria-label="Politique de confidentialité">
+      <li class="legal-section"><h2 class="section-heading">1. Qui sommes-nous ?</h2><p class="section-copy">La présente Politique de Confidentialité décrit la manière dont Julien Grisel (ci-après « nous », « l’Éditeur » ou « Kyto ») collecte, utilise et protège vos données personnelles lorsque vous utilisez l’application mobile Kyto (disponible sur iOS et Android).
+
+Responsable du traitement :
+Julien Grisel
+Email : contact@kytoapp.fr</p></li>
+      <li class="legal-section"><h2 class="section-heading">2. Quelles données collectons-nous ?</h2><p class="section-copy">Nous collectons les catégories de données suivantes :
+
+Données d’identification et de contact
+Nom et prénom
+Adresse email
+Numéro de téléphone et adresse postale (uniquement si vous les renseignez, par exemple pour la fiche d’urgence ou l’affiche d’animal perdu)
+
+Données de compte
+Identifiants de connexion (email ou via Google / Apple)
+Mot de passe (chiffré)
+
+Données relatives à vos animaux
+Nom, âge ou date de naissance, poids, race, sexe, signes distinctifs de l’animal
+Vaccins, traitements, rendez-vous, historique de santé, carnet de santé
+Photos de l’animal ou de documents (carnet de santé, passeport européen, ordonnances, etc.)
+Informations sur vos vétérinaires
+
+Données de foyer
+Les personnes que vous invitez à partager le carnet de vos animaux (leur compte Kyto et leur rôle dans le foyer)
+
+Données de localisation
+Localisation précise (GPS) uniquement lorsque l’application est ouverte et que vous utilisez la recherche de vétérinaires ou d’urgences vétérinaires proches. Votre position sert à interroger les services de cartographie et n’est pas enregistrée sur nos serveurs.
+
+Données techniques
+Identifiant de l’appareil et de notification, système d’exploitation, version de l’application, rapports de plantage, statistiques d’usage anonymes, adresses IP
+
+Données de paiement
+Les informations de paiement (coordonnées bancaires, cartes) sont traitées directement par Apple (App Store) ou Google (Google Play). Nous n’avons pas accès à vos numéros de carte bancaire. Nous recevons uniquement la confirmation de votre abonnement Kyto+ (statut et date de fin).
+
+Autres données
+Contenu que vous ajoutez volontairement (textes et photos privés)</p></li>
+      <li class="legal-section"><h2 class="section-heading">3. Comment collectons-nous vos données ?</h2><p class="section-copy">Directement lorsque vous créez un compte ou renseignez des informations
+Automatiquement lors de l’utilisation de l’application (données techniques, plantages, statistiques d’usage)
+Via les services de connexion tierce (Google et Apple)
+Via les plateformes de paiement (Apple et Google)</p></li>
+      <li class="legal-section"><h2 class="section-heading">4. Pourquoi collectons-nous vos données ? (Finalités)</h2><p class="section-copy">Finalité | Base légale RGPD
+Création et gestion de votre compte | Exécution du contrat
+Fourniture des fonctionnalités de l’app (carnet de santé, rappels, partage avec votre foyer, localisation des vétérinaires…) | Exécution du contrat
+Gestion des abonnements et paiements | Exécution du contrat
+Amélioration du Service, statistiques d’usage anonymes et correction des plantages | Intérêt légitime
+Envoi de notifications et rappels | Exécution du contrat / consentement
+Affichage de publicités dans l’application (sans abonnement Kyto+) | Consentement
+Réponse à vos demandes de contact | Intérêt légitime / exécution du contrat
+Respect de nos obligations légales | Obligation légale</p></li>
+      <li class="legal-section"><h2 class="section-heading">5. Partage de vos données</h2><p class="section-copy">Nous ne vendons jamais vos données personnelles.
+Nous pouvons partager certaines données uniquement avec :
+Apple et Google (pour la connexion, les paiements et la publicité)
+Les prestataires techniques strictement nécessaires au fonctionnement de l’application :
+- Supabase : base de données, authentification et stockage des fichiers (comptes, carnets, photos, documents)
+- OneSignal : envoi des notifications push (identifiant de notification de l’appareil)
+- Sentry : rapports de plantage (informations techniques, sans le contenu de vos carnets)
+- TelemetryDeck : statistiques d’usage anonymes, sans identifiant personnel
+- Google AdMob : affichage de publicités (voir section 9)
+- Apple Plans (iOS) et OpenStreetMap (Android) : recherche des vétérinaires proches, à partir de votre position approximative
+Les autorités compétentes si la loi l’exige
+
+Vos contenus (textes et photos de vos animaux) ne sont jamais rendus publics. Ils sont visibles uniquement par les membres du foyer que vous avez invités et par les personnes à qui vous choisissez d’envoyer un lien de partage ou un rapport PDF. Vous pouvez arrêter un partage à tout moment depuis l’application.</p></li>
+      <li class="legal-section"><h2 class="section-heading">6. Conservation des données</h2><p class="section-copy">Données de compte et données de vos animaux : conservées tant que votre compte est actif
+En cas de suppression de compte (possible à tout moment depuis les réglages de l’application) : vos données et fichiers sont supprimés immédiatement de notre base ; les sauvegardes techniques sont purgées dans un délai maximum de 30 jours (sauf obligation légale de conservation plus longue)
+Données de facturation : conservées selon les obligations comptables (généralement 10 ans) ; elles sont détenues par Apple ou Google
+Logs techniques et rapports de plantage : durée limitée (généralement 12 mois maximum)</p></li>
+      <li class="legal-section"><h2 class="section-heading">7. Vos droits (RGPD)</h2><p class="section-copy">Conformément au Règlement Général sur la Protection des Données, vous disposez des droits suivants :
+Droit d’accès
+Droit de rectification
+Droit à l’effacement (« droit à l’oubli »)
+Droit à la limitation du traitement
+Droit à la portabilité
+Droit d’opposition
+Droit de retirer votre consentement à tout moment (notamment pour la localisation, les notifications et la publicité personnalisée)
+
+Pour exercer vos droits, contactez-nous à : contact@kytoapp.fr
+Vous pouvez aussi supprimer votre compte et vos données directement dans l’application (Réglages).
+Nous répondrons dans un délai maximum d’un mois.
+Vous avez également le droit d’introduire une réclamation auprès de la CNIL (www.cnil.fr).</p></li>
+      <li class="legal-section"><h2 class="section-heading">8. Sécurité</h2><p class="section-copy">Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données (chiffrement des échanges, accès restreint aux données de chaque foyer, sauvegardes sécurisées, etc.).
+Cependant, aucune méthode de transmission ou de stockage n’est totalement infaillible.</p></li>
+      <li class="legal-section"><h2 class="section-heading">9. Publicité et suivi</h2><p class="section-copy">Sans abonnement Kyto+, l’application affiche des publicités via Google AdMob sur l’écran d’accueil et sur la liste des rappels. Aucune publicité n’est affichée dans le carnet de santé, les documents, le partage ni le mode urgence.
+Au premier lancement, l’application vous demande votre consentement publicitaire (Europe) et l’autorisation de suivi (iOS). Si vous refusez, les publicités affichées ne sont pas personnalisées. Vous pouvez modifier votre choix à tout moment dans les réglages de votre téléphone. L’abonnement Kyto+ supprime les publicités.</p></li>
+      <li class="legal-section"><h2 class="section-heading">10. Localisation et accès à la caméra</h2><p class="section-copy">L’accès à votre localisation et à la caméra n’est demandé que lorsque cela est nécessaire au fonctionnement d’une fonctionnalité.
+Vous pouvez à tout moment retirer ces autorisations dans les réglages de votre téléphone. Le retrait peut limiter certaines fonctionnalités (recherche de vétérinaires proches, ajout de photos).</p></li>
+      <li class="legal-section"><h2 class="section-heading">11. Données des mineurs</h2><p class="section-copy">L’application est accessible à tout public. Si vous avez moins de 15 ans, vous devez obtenir l’autorisation de vos parents ou tuteurs légaux avant d’utiliser le Service.</p></li>
+      <li class="legal-section"><h2 class="section-heading">12. Transferts hors Union européenne</h2><p class="section-copy">Vos données de carnet (comptes, animaux, photos, documents) sont hébergées par Supabase en France (région de Paris, Union européenne). Certains de nos prestataires (notamment Apple, Google, Sentry et OneSignal) peuvent toutefois traiter des données hors de l’Union européenne. Dans ce cas, nous nous assurons que des garanties appropriées sont mises en place (clauses contractuelles types de la Commission européenne, etc.).</p></li>
+      <li class="legal-section"><h2 class="section-heading">13. Modification de la Politique de Confidentialité</h2><p class="section-copy">Nous pouvons modifier la présente Politique à tout moment.
+Toute modification substantielle vous sera notifiée via l’application ou par email.
+La version en vigueur est toujours celle publiée sur kytoapp.fr/confiden.</p></li>
+      <li class="legal-section"><h2 class="section-heading">14. Contact</h2><p class="section-copy">Pour toute question relative à cette Politique de Confidentialité ou à vos données personnelles :
+Julien Grisel
+Email : contact@kytoapp.fr</p></li>
+     </ol>
+    </div>
+    <footer class="document-footer"><span class="footer-dot" aria-hidden="true"></span><p>Kyto · Politique de Confidentialité</p></footer>
+  </article>
+  <nav class="legal-nav" aria-label="Autres pages">
+    <a href="mentions-legales.html">Mentions légales</a><a href="cgu.html">Conditions générales</a><a href="cgv.html">Conditions de vente</a><a href="contact.html">Nous contacter</a>
+  </nav>
+</main>
+</body></html>

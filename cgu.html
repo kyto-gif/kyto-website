@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales d’Utilisation – Kyto</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --forest: #24483c;
+      --cream: #fffaf1;
+      --paper: #fffdf8;
+      --sage: #dcebdc;
+      --muted: #58756a;
+      --terracotta: #c66c43;
+      --line: rgba(36, 72, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--cream);
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 16px;
+      color: var(--forest);
+    }
+
+    .legal-page {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 3.5rem) clamp(0.75rem, 3vw, 2rem);
+    }
+
+    .legal-document {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 18px 52px rgba(36, 72, 60, 0.09);
+    }
+
+    .document-header {
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem) clamp(1.25rem, 3vw, 2.25rem);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8 0%, #f2f8ee 100%);
+    }
+
+    .document-marker {
+      width: 42px;
+      height: 5px;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    .legal-title {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      letter-spacing: -0.028em;
+    }
+
+    .document-content {
+      padding: clamp(1.2rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem);
+    }
+
+    .section-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .legal-section {
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-section:first-child {
+      padding-top: 0;
+    }
+
+    .legal-section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      line-height: 1.22;
+    }
+
+    .section-copy {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .document-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 clamp(1.35rem, 5vw, 4.5rem);
+      padding: 1.1rem 0 1.35rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    @media (max-width: 560px) {
+      .legal-page {
+        padding: 0.6rem;
+      }
+
+      .document-header {
+        padding: 1.35rem 1.15rem 1.15rem;
+      }
+
+      .document-content {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .document-footer {
+        margin: 0 1.15rem;
+      }
+
+      .section-copy {
+        line-height: 1.62;
+      }
+    }
+  
+    .section-heading{font-size:1.1rem}
+    .section-copy{font-size:.95rem}
+    .home-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(36,72,60,.2);border-radius:999px;padding:6px 12px;margin-bottom:20px;color:var(--forest);font-weight:600;font-size:13px;text-decoration:none;transition:background .2s}
+    .home-btn:hover{background:rgba(255,255,255,.7)}
+    .home-btn:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
+    .legal-title{font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.15;color:var(--forest)}
+    .update{margin:12px 0 0;color:var(--muted);font-weight:600;font-size:.8rem}
+    .legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:20px;font-size:14px}
+    .legal-nav a{color:var(--muted)}
+    .legal-nav a:hover{color:var(--forest);text-decoration:underline}
+    .document-footer p{margin:0;font-size:.75rem;font-weight:500}
+</style>
+</head>
+<body>
+<main class="legal-page" aria-labelledby="document-title">
+  <article class="legal-document">
+    <header class="document-header">
+      <a class="home-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Accueil</a>
+      <div class="document-marker" aria-hidden="true"></div>
+      <h1 id="document-title" class="legal-title">CONDITIONS GÉNÉRALES D’UTILISATION – KYTO</h1>
+      <p class="update">Dernière mise à jour : 8 octobre 2026</p>
+    </header>
+    <div class="document-content">
+     <ol class="section-list" aria-label="Conditions générales d’utilisation">
+      <li class="legal-section"><h2 class="section-heading">1. Éditeur</h2><p class="section-copy">Kyto est édité par Julien Grisel. Contact : contact@kytoapp.fr.</p></li>
+      <li class="legal-section"><h2 class="section-heading">2. Objet</h2><p class="section-copy">Les présentes CGU définissent les conditions d’accès et d’utilisation de l’application Kyto, disponible sur iPhone (iOS) et Android. Kyto permet de gérer les informations essentielles des animaux de compagnie, le carnet de santé, les rappels, les vétérinaires proches et les documents (dont le passeport européen).</p></li>
+      <li class="legal-section"><h2 class="section-heading">3. Acceptation</h2><p class="section-copy">L’utilisation du Service vaut acceptation pleine et entière des présentes CGU. Sans acceptation, le Service ne doit pas être utilisé.</p></li>
+      <li class="legal-section"><h2 class="section-heading">4. Compte et accès</h2><p class="section-copy">L’accès nécessite la création d’un compte via email, Google ou Apple. L’Utilisateur doit fournir des informations exactes et à jour, et préserver la confidentialité de ses identifiants. Les utilisateurs de moins de 15 ans doivent être autorisés par leurs parents ou tuteurs.</p></li>
+      <li class="legal-section"><h2 class="section-heading">5. Fonctionnalités</h2><p class="section-copy">Kyto permet notamment le suivi du poids et du carnet de santé, la gestion de plusieurs animaux, la localisation des vétérinaires et urgences proches, les rappels de soins, le stockage de documents (dont le passeport européen), le partage du carnet avec les membres d’un foyer invités par l’Utilisateur, et la création d’un lien de partage ou d’un rapport PDF.
+Kyto est un outil d’organisation et ne constitue pas un avis médical ou vétérinaire. En cas d’urgence, contactez immédiatement votre vétérinaire, une clinique d’urgence ou le 3115 (urgences vétérinaires). Les horaires et disponibilités des établissements affichés sont donnés à titre indicatif et doivent être vérifiés auprès de l’établissement.</p></li>
+      <li class="legal-section"><h2 class="section-heading">6. Freemium, publicité et abonnements</h2><p class="section-copy">Le Service est proposé en mode freemium. Des fonctionnalités gratuites et des fonctionnalités premium (Kyto+) sont disponibles via abonnement mensuel ou annuel. Les tarifs et conditions sont indiqués dans l’application avant l’achat. Les paiements sont gérés par Apple App Store ou Google Play Store, et l’abonnement peut être résilié selon leurs modalités. Les conditions de vente détaillées figurent dans les CGV.
+Sans abonnement, l’application peut afficher des publicités sur l’écran d’accueil et sur la liste des rappels. Elles ne sont jamais affichées dans le carnet de santé, les documents, le partage ni en mode urgence, et disparaissent avec Kyto+.</p></li>
+      <li class="legal-section"><h2 class="section-heading">7. Contenus de l’Utilisateur et partage</h2><p class="section-copy">Les textes et photos ajoutés par l’Utilisateur restent privés. Ils sont visibles uniquement par les membres du foyer que l’Utilisateur invite et par les personnes à qui il choisit d’envoyer un lien de partage ou un rapport PDF. Kyto n’est pas un réseau social. L’Utilisateur reste responsable des contenus qu’il ajoute et des personnes avec lesquelles il les partage.</p></li>
+      <li class="legal-section"><h2 class="section-heading">8. Obligations</h2><p class="section-copy">L’Utilisateur s’engage à utiliser le Service loyalement, à ne pas accéder frauduleusement au Service ou aux données d’autrui, à ne pas l’utiliser à des fins commerciales non autorisées, à ne pas tenter de contourner le contrôle des abonnements et à respecter la loi.</p></li>
+      <li class="legal-section"><h2 class="section-heading">9. Propriété intellectuelle</h2><p class="section-copy">Tous les éléments de Kyto (marque, logo, interface, textes, graphismes, code) sont protégés. Toute reproduction non autorisée est interdite.</p></li>
+      <li class="legal-section"><h2 class="section-heading">10. Données personnelles</h2><p class="section-copy">Kyto traite des données personnelles nécessaires au fonctionnement du Service, conformément au RGPD et à la Politique de Confidentialité (kytoapp.fr/confiden), accessible dans l’application.</p></li>
+      <li class="legal-section"><h2 class="section-heading">11. Localisation, caméra et notifications</h2><p class="section-copy">L’accès à la localisation, à la caméra et aux notifications peut être demandé pour les fonctionnalités correspondantes. Ces accès sont facultatifs et peuvent être désactivés dans les paramètres du téléphone.</p></li>
+      <li class="legal-section"><h2 class="section-heading">12. Responsabilité</h2><p class="section-copy">L’Éditeur s’efforce d’assurer la disponibilité du Service mais ne garantit pas une continuité parfaite. Il n’est pas responsable d’un rappel non reçu (notifications désactivées, mode économie d’énergie, absence de réseau, etc.) ni de décisions de santé prises sur la seule base des informations de l’application. Sa responsabilité est limitée dans les conditions prévues par la loi.</p></li>
+      <li class="legal-section"><h2 class="section-heading">13. Résiliation et modification</h2><p class="section-copy">L’Utilisateur peut supprimer son compte à tout moment depuis les réglages de l’application ; ses données sont alors supprimées (voir la Politique de Confidentialité). La suppression du compte ne résilie pas l’abonnement, qui doit être résilié auprès d’Apple ou de Google. L’Éditeur peut suspendre ou résilier un compte en cas de manquement aux CGU. Les CGU peuvent être modifiées à tout moment ; la poursuite de l’utilisation vaut acceptation.</p></li>
+      <li class="legal-section"><h2 class="section-heading">14. Droit applicable et contact</h2><p class="section-copy">Les CGU sont soumises au droit français. En cas de litige, les tribunaux français sont compétents, sous réserve des droits dont dispose le consommateur en vertu de la loi. Contact : contact@kytoapp.fr.</p></li>
+     </ol>
+    </div>
+    <footer class="document-footer"><span class="footer-dot" aria-hidden="true"></span><p>Kyto · Conditions Générales d’Utilisation</p></footer>
+  </article>
+  <nav class="legal-nav" aria-label="Autres pages">
+    <a href="mentions-legales.html">Mentions légales</a><a href="cgv.html">Conditions de vente</a><a href="confiden.html">Politique de confidentialité</a><a href="contact.html">Nous contacter</a>
+  </nav>
+</main>
+</body></html>

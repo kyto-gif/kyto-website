@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales de Vente – Kyto</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --forest: #24483c;
+      --cream: #fffaf1;
+      --paper: #fffdf8;
+      --sage: #dcebdc;
+      --muted: #58756a;
+      --terracotta: #c66c43;
+      --line: rgba(36, 72, 60, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--cream);
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      font-size: 16px;
+      color: var(--forest);
+    }
+
+    .legal-page {
+      width: 100%;
+      padding: clamp(1rem, 4vw, 3.5rem) clamp(0.75rem, 3vw, 2rem);
+    }
+
+    .legal-document {
+      width: 100%;
+      max-width: 940px;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      box-shadow: 0 18px 52px rgba(36, 72, 60, 0.09);
+    }
+
+    .document-header {
+      padding: clamp(1.5rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem) clamp(1.25rem, 3vw, 2.25rem);
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(135deg, #fffdf8 0%, #f2f8ee 100%);
+    }
+
+    .document-marker {
+      width: 42px;
+      height: 5px;
+      margin-bottom: 1rem;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    .legal-title {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      letter-spacing: -0.028em;
+    }
+
+    .document-content {
+      padding: clamp(1.2rem, 4vw, 3rem) clamp(1.35rem, 5vw, 4.5rem);
+    }
+
+    .section-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .legal-section {
+      padding: clamp(1rem, 2vw, 1.5rem) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .legal-section:first-child {
+      padding-top: 0;
+    }
+
+    .legal-section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .section-heading {
+      margin: 0;
+      font-family: "Fraunces", serif;
+      line-height: 1.22;
+    }
+
+    .section-copy {
+      margin: 0.55rem 0 0;
+      color: var(--muted);
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    .document-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin: 0 clamp(1.35rem, 5vw, 4.5rem);
+      padding: 1.1rem 0 1.35rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .footer-dot {
+      width: 7px;
+      height: 7px;
+      flex: 0 0 auto;
+      border-radius: 999px;
+      background: var(--terracotta);
+    }
+
+    @media (max-width: 560px) {
+      .legal-page {
+        padding: 0.6rem;
+      }
+
+      .document-header {
+        padding: 1.35rem 1.15rem 1.15rem;
+      }
+
+      .document-content {
+        padding: 1.25rem 1.15rem;
+      }
+
+      .document-footer {
+        margin: 0 1.15rem;
+      }
+
+      .section-copy {
+        line-height: 1.62;
+      }
+    }
+  
+    .section-heading{font-size:1.1rem}
+    .section-copy{font-size:.95rem}
+    .home-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(36,72,60,.2);border-radius:999px;padding:6px 12px;margin-bottom:20px;color:var(--forest);font-weight:600;font-size:13px;text-decoration:none;transition:background .2s}
+    .home-btn:hover{background:rgba(255,255,255,.7)}
+    .home-btn:focus-visible{outline:2px solid var(--terracotta);outline-offset:2px}
+    .legal-title{font-size:clamp(1.5rem,4.5vw,1.9rem);line-height:1.15;color:var(--forest)}
+    .update{margin:12px 0 0;color:var(--muted);font-weight:600;font-size:.8rem}
+    .legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:20px;font-size:14px}
+    .legal-nav a{color:var(--muted)}
+    .legal-nav a:hover{color:var(--forest);text-decoration:underline}
+    .document-footer p{margin:0;font-size:.75rem;font-weight:500}
+</style>
+</head>
+<body>
+<main class="legal-page" aria-labelledby="document-title">
+  <article class="legal-document">
+    <header class="document-header">
+      <a class="home-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Accueil</a>
+      <div class="document-marker" aria-hidden="true"></div>
+      <h1 id="document-title" class="legal-title">CONDITIONS GÉNÉRALES DE VENTE – KYTO</h1>
+      <p class="update">Dernière mise à jour : 8 octobre 2026</p>
+    </header>
+    <div class="document-content">
+     <ol class="section-list" aria-label="Conditions générales de vente">
+      <li class="legal-section"><h2 class="section-heading">1. Éditeur / Vendeur</h2><p class="section-copy">Les présentes Conditions Générales de Vente (ci-après « CGV ») s’appliquent aux ventes réalisées via l’application mobile Kyto, éditée par :
+Julien Grisel
+Email : contact@kytoapp.fr</p></li>
+      <li class="legal-section"><h2 class="section-heading">2. Objet</h2><p class="section-copy">Les présentes CGV ont pour objet de définir les conditions applicables à la souscription des abonnements payants proposés dans l’application Kyto (ci-après « les Offres » ou « les Abonnements »).
+Elles complètent les Conditions Générales d’Utilisation (CGU) de l’application.</p></li>
+      <li class="legal-section"><h2 class="section-heading">3. Description des Offres</h2><p class="section-copy">Kyto propose un modèle freemium :
+Des fonctionnalités gratuites accessibles sans abonnement
+Des fonctionnalités premium (Kyto+) accessibles via abonnement
+
+Kyto+ comprend notamment : un nombre d’animaux plus important, des rappels anticipés, le partage sécurisé du carnet avec un rapport PDF, et la suppression des publicités. Kyto+ s’applique à l’ensemble du foyer de l’abonné.
+
+Les abonnements disponibles sont :
+Abonnement mensuel (5,99 € TTC par mois)
+Abonnement annuel (39,99 € TTC par an)
+
+Une période d’essai gratuite d’une semaine peut être proposée aux nouveaux abonnés. Si l’Utilisateur ne résilie pas avant la fin de l’essai, l’abonnement choisi démarre automatiquement et le premier paiement est effectué.
+
+Le détail des fonctionnalités incluses dans chaque offre, ainsi que les tarifs en vigueur, sont indiqués directement dans l’application au moment de la souscription.
+L’Éditeur se réserve le droit de modifier les offres, les fonctionnalités ou les tarifs à tout moment. Les modifications ne s’appliquent pas aux abonnements déjà en cours, sauf disposition contraire.</p></li>
+      <li class="legal-section"><h2 class="section-heading">4. Souscription de l’abonnement</h2><p class="section-copy">La souscription s’effectue exclusivement via les plateformes :
+Apple App Store (pour iOS)
+Google Play Store (pour Android)
+
+En validant son abonnement, l’Utilisateur reconnaît avoir pris connaissance des présentes CGV et des conditions de la plateforme concernée (Apple ou Google), et les accepter.</p></li>
+      <li class="legal-section"><h2 class="section-heading">5. Prix et paiement</h2><p class="section-copy">Les prix sont indiqués en euros, toutes taxes comprises (TTC), dans l’application.
+Le paiement est intégralement géré par Apple ou Google selon la plateforme utilisée.
+L’Éditeur n’a pas accès aux données bancaires de l’Utilisateur. Il reçoit uniquement la confirmation de l’abonnement (statut et date de fin).
+Le prélèvement est effectué selon la périodicité choisie (mensuelle ou annuelle), à la date de souscription ou de renouvellement (ou à la fin de la période d’essai gratuite, le cas échéant).</p></li>
+      <li class="legal-section"><h2 class="section-heading">6. Entrée en vigueur et durée de l’abonnement</h2><p class="section-copy">L’abonnement prend effet immédiatement après la confirmation du paiement par Apple ou Google (ou dès le début de la période d’essai gratuite).
+Il est conclu pour la durée choisie (1 mois ou 1 an) et se renouvelle tacitement par périodes successives de même durée, sauf résiliation dans les conditions prévues ci-dessous.</p></li>
+      <li class="legal-section"><h2 class="section-heading">7. Renouvellement automatique</h2><p class="section-copy">L’abonnement se renouvelle automatiquement à chaque échéance, sauf résiliation par l’Utilisateur au moins 24 heures avant la fin de la période en cours.
+L’Utilisateur sera informé du renouvellement selon les modalités prévues par Apple ou Google.</p></li>
+      <li class="legal-section"><h2 class="section-heading">8. Résiliation de l’abonnement</h2><p class="section-copy">L’Utilisateur peut résilier son abonnement à tout moment :
+Sur iOS : directement depuis les réglages de son compte Apple (Abonnements)
+Sur Android : directement depuis Google Play (Abonnements)
+
+La suppression du compte Kyto ne résilie pas l’abonnement : celui-ci doit être résilié auprès d’Apple ou de Google.
+La résiliation prend effet à la fin de la période d’abonnement en cours ; l’accès à Kyto+ reste actif jusqu’à cette date.
+Aucun remboursement au prorata n’est généralement effectué pour la période déjà commencée, sauf disposition contraire d’Apple ou Google, ou cas particuliers prévus par la loi.</p></li>
+      <li class="legal-section"><h2 class="section-heading">9. Droit de rétractation</h2><p class="section-copy">Conformément aux articles L.221-18 et suivants du Code de la consommation, le consommateur dispose d’un délai de 14 jours pour exercer son droit de rétractation.
+Toutefois, pour les contenus numériques fournis sur un support immatériel, le droit de rétractation ne peut plus être exercé une fois que l’exécution a commencé avec l’accord préalable exprès du consommateur et sa renonciation expresse à son droit de rétractation (article L.221-28 du Code de la consommation).
+En souscrivant à un abonnement et en accédant immédiatement aux fonctionnalités premium, l’Utilisateur reconnaît clairement :
+Demander l’exécution immédiate du service
+Renoncer expressément à son droit de rétractation
+
+Dans ce cas, aucun remboursement au titre du droit de rétractation ne sera dû.
+Des remboursements peuvent néanmoins être demandés directement auprès d’Apple ou de Google selon leurs propres politiques.</p></li>
+      <li class="legal-section"><h2 class="section-heading">10. Disponibilité du Service</h2><p class="section-copy">L’Éditeur s’efforce d’assurer un accès continu aux fonctionnalités premium.
+Toutefois, l’accès peut être interrompu pour maintenance, mise à jour, ou cas de force majeure.
+En cas d’indisponibilité prolongée non imputable à l’Utilisateur, ce dernier pourra contacter le support pour étudier une solution (prolongation, avoir, etc.), sans que cela constitue une obligation de remboursement automatique.</p></li>
+      <li class="legal-section"><h2 class="section-heading">11. Réclamations et support</h2><p class="section-copy">Pour toute question relative à un abonnement ou à une facturation :
+En premier lieu, contactez le support de la plateforme (Apple ou Google), qui gère les paiements
+Vous pouvez également nous écrire à : contact@kytoapp.fr</p></li>
+      <li class="legal-section"><h2 class="section-heading">12. Responsabilité</h2><p class="section-copy">L’Éditeur ne saurait être tenu responsable des problèmes de paiement, de facturation ou de remboursement liés aux plateformes Apple et Google, qui relèvent de leurs conditions respectives.
+La responsabilité de l’Éditeur est limitée dans les conditions prévues par les CGU.</p></li>
+      <li class="legal-section"><h2 class="section-heading">13. Droit applicable et litiges</h2><p class="section-copy">Les présentes CGV sont soumises au droit français.
+En cas de litige, et à défaut de résolution amiable, les tribunaux français seront compétents, sous réserve des droits dont dispose le consommateur en vertu de la loi.
+Conformément à la réglementation, le consommateur peut recourir gratuitement à un médiateur de la consommation : [À COMPLÉTER : nom et coordonnées du médiateur].</p></li>
+      <li class="legal-section"><h2 class="section-heading">14. Contact</h2><p class="section-copy">Pour toute question relative aux présentes CGV :
+Julien Grisel
+Email : contact@kytoapp.fr</p></li>
+     </ol>
+    </div>
+    <footer class="document-footer"><span class="footer-dot" aria-hidden="true"></span><p>Kyto · Conditions Générales de Vente</p></footer>
+  </article>
+  <nav class="legal-nav" aria-label="Autres pages">
+    <a href="mentions-legales.html">Mentions légales</a><a href="cgu.html">Conditions générales</a><a href="confiden.html">Politique de confidentialité</a><a href="contact.html">Nous contacter</a>
+  </nav>
+</main>
+</body></html>
