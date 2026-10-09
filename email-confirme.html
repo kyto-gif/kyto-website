@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex"><title>E-mail confirmé – Kyto</title>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#fffaf1;color:#24483c;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+main{max-width:420px}
+.badge{width:72px;height:72px;border-radius:50%;background:#e8f1ec;color:#2f7d5b;display:grid;place-items:center;font-size:36px;margin:0 auto 20px}
+.badge.err{background:#fbe9e2;color:#c0502a}
+h1{font-size:26px;margin:0 0 12px}
+p{line-height:1.55;margin:0 0 8px;color:#3d5f52}
+a.btn{display:inline-block;margin-top:20px;background:#e98757;color:#fff;border-radius:999px;padding:14px 26px;font-weight:700;text-decoration:none}
+a.link{display:block;margin-top:14px;color:#24483c;font-size:14px}
+</style><link rel="icon" type="image/png" href="/favicon.png"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head>
+<body><main>
+<div class="badge" id="badge">✓</div>
+<h1 id="title">Adresse e-mail confirmée</h1>
+<p id="text">Merci ! Votre compte Kyto est activé.<br>Vous pouvez revenir dans l’app et vous connecter.</p>
+<a class="btn" id="open" href="kyto://">Ouvrir Kyto</a>
+<a class="link" href="/">Aller sur kytoapp.fr</a>
+</main>
+<script>
+// Si le lien de confirmation a expiré ou a déjà servi, Supabase ajoute une erreur dans l'adresse.
+try{
+  var h=(location.hash||"")+"&"+(location.search||"");
+  if(/error=|error_code=/.test(h)){
+    document.getElementById("badge").textContent="!";
+    document.getElementById("badge").className="badge err";
+    document.getElementById("title").textContent="Lien expiré ou déjà utilisé";
+    document.getElementById("text").innerHTML="Si votre compte est déjà activé, ouvrez simplement l’app et connectez-vous.<br>Sinon, redemandez un e-mail de confirmation depuis l’app.";
+  }
+}catch(e){}
+</script>
+</body></html>
