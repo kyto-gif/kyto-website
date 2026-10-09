@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex"><title>Nouveau mot de passe – Kyto</title>
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:#fffaf1;color:#24483c;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+main{max-width:420px;width:100%}
+h1{font-size:26px;margin:0 0 12px}
+p{line-height:1.55;margin:0 0 8px;color:#3d5f52}
+input{box-sizing:border-box;width:100%;margin-top:12px;padding:14px 16px;border:1px solid #d9d2c3;border-radius:14px;font-size:16px;background:#fff;color:#24483c}
+button,a.btn{display:inline-block;margin-top:18px;background:#e98757;color:#fff;border:0;border-radius:999px;padding:14px 26px;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
+button:disabled{opacity:.6}
+#msg{margin-top:14px;font-size:14px;color:#c0502a;min-height:20px}
+a.link{display:block;margin-top:14px;color:#24483c;font-size:14px}
+.hidden{display:none}
+</style><link rel="icon" type="image/png" href="/favicon.png"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"></head>
+<body><main>
+<section id="form">
+<h1>Nouveau mot de passe</h1>
+<p>Choisissez un nouveau mot de passe pour votre compte Kyto.</p>
+<input id="p1" type="password" placeholder="Nouveau mot de passe (8 caractères min.)" autocomplete="new-password">
+<input id="p2" type="password" placeholder="Confirmez le mot de passe" autocomplete="new-password">
+<button id="go" type="button">Enregistrer</button>
+<div id="msg"></div>
+</section>
+<section id="done" class="hidden">
+<h1>Mot de passe modifié</h1>
+<p>Vous pouvez revenir dans l’app et vous connecter avec votre nouveau mot de passe.</p>
+<a class="btn" href="kyto://">Ouvrir Kyto</a>
+</section>
+<section id="bad" class="hidden">
+<h1>Lien expiré ou déjà utilisé</h1>
+<p>Redemandez un lien depuis l’app avec « Mot de passe oublié ? ».</p>
+</section>
+<a class="link" href="/">Aller sur kytoapp.fr</a>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+var sb=supabase.createClient("https://ukryskholoefuazvmoql.supabase.co","sb_publishable_kGMXq6alHiTlzi0LmXawTA_GG6Y-DCs");
+var $=function(i){return document.getElementById(i)};
+var h=(location.hash||"")+"&"+(location.search||"");
+if(/error=|error_code=/.test(h)){$("form").className="hidden";$("bad").className="";}
+$("go").onclick=async function(){
+  var a=$("p1").value,b=$("p2").value,m=$("msg");
+  if(a.length<8){m.textContent="8 caractères minimum.";return}
+  if(a!==b){m.textContent="Les deux mots de passe sont différents.";return}
+  $("go").disabled=true;m.textContent="";
+  try{
+    var s=await sb.auth.getSession();
+    if(!s.data.session){$("form").className="hidden";$("bad").className="";return}
+    var r=await sb.auth.updateUser({password:a});
+    if(r.error){m.textContent=r.error.message;$("go").disabled=false;return}
+    await sb.auth.signOut();
+    $("form").className="hidden";$("done").className="";
+  }catch(e){m.textContent="Une erreur est survenue. Réessayez.";$("go").disabled=false}
+};
+</script>
+</body></html>
