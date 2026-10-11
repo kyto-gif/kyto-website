@@ -363,7 +363,7 @@
           <div class="field-group attachment-group">
             <span class="field-label" id="attachment-label">Pièces jointes</span>
             <label class="attachment-button" for="contact-attachments" id="attachment-button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg><span>Importer</span></label>
-            <input id="contact-attachments" class="attachment-input" type="file" multiple aria-labelledby="attachment-label attachment-button">
+            <input id="contact-attachments" class="attachment-input" type="file" multiple accept=".jpg,.jpeg,.png,.heic,.pdf,image/jpeg,image/png,image/heic,application/pdf" aria-labelledby="attachment-label attachment-button">
             <div id="attachment-names" class="attachment-names" aria-live="polite"></div>
           </div>
           <button id="submit-button" class="submit-button" type="submit"><span>Envoyer le message</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
@@ -393,7 +393,16 @@
   function hideStatuses() { successPanel.classList.remove('is-visible'); errorPanel.classList.remove('is-visible'); }
 
   attachmentInput.addEventListener('change', function () {
-    attachmentNames.textContent = Array.from(attachmentInput.files).map(function (f) { return f.name; }).join(' · ');
+    const allowed = /\.(jpe?g|png|heic|pdf)$/i;
+    let note = '';
+    const kept = Array.from(attachmentInput.files).filter(function (f) { return allowed.test(f.name) && f.size <= 5 * 1024 * 1024; }).slice(0, 3);
+    if (kept.length !== attachmentInput.files.length) {
+      const transfer = new DataTransfer();
+      kept.forEach(function (f) { transfer.items.add(f); });
+      attachmentInput.files = transfer.files;
+      note = 'Seuls 3 fichiers JPEG, PNG, HEIC ou PDF de 5 Mo maximum sont acceptés. ';
+    }
+    attachmentNames.textContent = note + Array.from(attachmentInput.files).map(function (f) { return f.name; }).join(' · ');
   });
 
   function readFileAsBase64(file) {
