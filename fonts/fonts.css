@@ -1,0 +1,4 @@
+/* Polices hébergées sur kytoapp.fr (aucun appel à Google Fonts : pas d'adresse IP transmise à un tiers).
+   DM Sans et Fraunces — licence SIL Open Font License 1.1 (voir OFL-DM-Sans.txt et OFL-Fraunces.txt). */
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400 700;font-display:swap;src:url("/fonts/dm-sans.woff2") format("woff2")}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:600 700;font-display:swap;src:url("/fonts/fraunces.woff2") format("woff2")}

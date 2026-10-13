@@ -16,14 +16,14 @@ a.link{display:block;margin-top:14px;color:#24483c;font-size:14px}
 <section id="form">
 <h1>Nouveau mot de passe</h1>
 <p>Choisissez un nouveau mot de passe pour votre compte Kyto.</p>
-<input id="p1" type="password" placeholder="Nouveau mot de passe (8 caractères min.)" autocomplete="new-password">
+<input id="p1" type="password" placeholder="Nouveau mot de passe (8 caractères, A, a, 1)" autocomplete="new-password">
 <input id="p2" type="password" placeholder="Confirmez le mot de passe" autocomplete="new-password">
 <button id="go" type="button">Enregistrer</button>
 <div id="msg"></div>
 </section>
 <section id="done" class="hidden">
 <h1>Mot de passe modifié</h1>
-<p>Vous pouvez revenir dans l’app et vous connecter avec votre nouveau mot de passe.</p>
+<p>Par sécurité, vous avez été déconnecté(e) de tous vos appareils. Revenez dans l’app et connectez-vous avec votre nouveau mot de passe.</p>
 <a class="btn" href="kyto://">Ouvrir Kyto</a>
 </section>
 <section id="bad" class="hidden">
@@ -34,31 +34,49 @@ a.link{display:block;margin-top:14px;color:#24483c;font-size:14px}
 </main>
 <script>
 (function(){
-var API="https://ukryskholoefuazvmoql.supabase.co/auth/v1/user";
+var AUTH="https://ukryskholoefuazvmoql.supabase.co/auth/v1";
 var KEY="sb_publishable_kGMXq6alHiTlzi0LmXawTA_GG6Y-DCs";
 var $=function(i){return document.getElementById(i)};
 var show=function(id){["form","done","bad"].forEach(function(x){$(x).className=(x===id)?"":"hidden"})};
-// Le lien reçu par e-mail contient le jeton après le « # ». On le garde en mémoire seulement
-// (jamais stocké) et on l'efface tout de suite de la barre d'adresse.
+var headers=function(token){var h={"Content-Type":"application/json","apikey":KEY};if(token){h.Authorization="Bearer "+token}return h};
+// Le lien reçu par e-mail contient un jeton à usage unique (token_hash), ou une session
+// (access_token, ancien format). On le garde en mémoire seulement (jamais stocké) et on
+// l'efface tout de suite de la barre d'adresse. Le jeton n'est utilisé qu'au moment
+// d'enregistrer : un simple aperçu du lien (antivirus de messagerie) ne le consomme pas.
 var hash=new URLSearchParams((location.hash||"").replace(/^#/,""));
 var query=new URLSearchParams(location.search||"");
+var tokenHash=hash.get("token_hash")||query.get("token_hash");
 var token=hash.get("access_token");
 var failed=hash.has("error")||hash.has("error_code")||query.has("error")||query.has("error_code");
 try{history.replaceState(null,"",location.pathname)}catch(e){}
-if(failed||!token){show("bad")}
+if(failed||(!tokenHash&&!token)){show("bad")}
 $("go").onclick=async function(){
   var a=$("p1").value,b=$("p2").value,m=$("msg");
-  if(a.length<8){m.textContent="8 caractères minimum.";return}
+  if(a.length<8||!/[a-z]/.test(a)||!/[A-Z]/.test(a)||!/[0-9]/.test(a)){m.textContent="8 caractères minimum, avec une majuscule, une minuscule et un chiffre.";return}
   if(a!==b){m.textContent="Les deux mots de passe sont différents.";return}
   $("go").disabled=true;m.textContent="";
   try{
-    var r=await fetch(API,{method:"PUT",headers:{"Content-Type":"application/json","apikey":KEY,"Authorization":"Bearer "+token},body:JSON.stringify({password:a})});
+    // 1. Le jeton du lien ouvre une session temporaire (une seule fois).
+    if(!token&&tokenHash){
+      var v=await fetch(AUTH+"/verify",{method:"POST",headers:headers(),body:JSON.stringify({type:"recovery",token_hash:tokenHash})});
+      tokenHash=null;
+      var s={};try{s=await v.json()}catch(x){}
+      if(!v.ok||!s||!s.access_token){show("bad");return}
+      token=s.access_token;
+    }
+    // 2. Enregistre le nouveau mot de passe.
+    var r=await fetch(AUTH+"/user",{method:"PUT",headers:headers(token),body:JSON.stringify({password:a})});
     if(r.status===401||r.status===403){show("bad");return}
     if(!r.ok){
       var e={};try{e=await r.json()}catch(x){}
-      m.textContent=(e&&(e.msg||e.message||e.error_description))||"Impossible de modifier le mot de passe.";
+      var code=e&&(e.error_code||e.code);
+      m.textContent=code==="weak_password"?"Mot de passe trop faible : 8 caractères minimum, avec une majuscule, une minuscule et un chiffre."
+        :code==="same_password"?"Choisissez un mot de passe différent de l’ancien."
+        :"Impossible de modifier le mot de passe. Réessayez.";
       $("go").disabled=false;return;
     }
+    // 3. Par sécurité, ferme toutes les sessions ouvertes (dont celle de ce lien).
+    try{await fetch(AUTH+"/logout?scope=global",{method:"POST",headers:headers(token)})}catch(x){}
     token=null;
     show("done");
   }catch(err){m.textContent="Une erreur est survenue. Réessayez.";$("go").disabled=false}
