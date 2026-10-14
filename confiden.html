@@ -164,7 +164,7 @@
       <a class="home-btn" href="index.html"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>Accueil</a>
       <div class="document-marker" aria-hidden="true"></div>
       <h1 id="document-title" class="legal-title">POLITIQUE DE CONFIDENTIALITÉ – KYTO</h1>
-      <p class="update">Dernière mise à jour : 8 octobre 2026</p>
+      <p class="update">Dernière mise à jour : 14 octobre 2026</p>
     </header>
     <div class="document-content">
      <ol class="section-list" aria-label="Politique de confidentialité">
@@ -207,7 +207,8 @@ Contenu que vous ajoutez volontairement (textes et photos privés)</p></li>
       <li class="legal-section"><h2 class="section-heading">3. Comment collectons-nous vos données ?</h2><p class="section-copy">Directement lorsque vous créez un compte ou renseignez des informations
 Automatiquement lors de l’utilisation de l’application (données techniques, plantages, statistiques d’usage)
 Via les services de connexion tierce (Google et Apple)
-Via les plateformes de paiement (Apple et Google)</p></li>
+Via les plateformes de paiement (Apple et Google)
+Via le formulaire de contact du site kytoapp.fr (adresse e-mail, objet, message et pièces jointes)</p></li>
       <li class="legal-section"><h2 class="section-heading">4. Pourquoi collectons-nous vos données ? (Finalités)</h2><p class="section-copy">Finalité | Base légale RGPD
 Création et gestion de votre compte | Exécution du contrat
 Fourniture des fonctionnalités de l’app (carnet de santé, rappels, partage avec votre foyer, localisation des vétérinaires…) | Exécution du contrat
@@ -226,14 +227,22 @@ Les prestataires techniques strictement nécessaires au fonctionnement de l’ap
 - Sentry : rapports de plantage (informations techniques, sans le contenu de vos carnets)
 - TelemetryDeck : statistiques d’usage anonymes, sans identifiant personnel
 - Google AdMob : affichage de publicités (voir section 9)
-- Apple Plans (iOS) et OpenStreetMap (Android) : recherche des vétérinaires proches, à partir de votre position approximative
+- Apple Plans (iOS), OpenStreetMap et Overpass API (Android) : cartes et recherche des vétérinaires proches ; ces services reçoivent la zone recherchée autour de votre position et l’adresse IP de votre téléphone
+- Resend : envoi des messages que vous nous adressez depuis l’application ou le site (votre adresse e-mail, votre message et ses pièces jointes)
+- Cloudflare : affichage de la page de partage du carnet (carnet.kytoapp.fr) et gestion du nom de domaine kytoapp.fr
+- GitHub : hébergement du site kytoapp.fr
 Les autorités compétentes si la loi l’exige
 
-Vos contenus (textes et photos de vos animaux) ne sont jamais rendus publics. Ils sont visibles uniquement par les membres du foyer que vous avez invités et par les personnes à qui vous choisissez d’envoyer un lien de partage ou un rapport PDF. Vous pouvez arrêter un partage à tout moment depuis l’application.</p></li>
+Vos contenus (textes et photos de vos animaux) ne sont jamais rendus publics. Ils sont visibles uniquement par les membres du foyer que vous avez invités et par les personnes à qui vous choisissez d’envoyer un lien de partage ou un rapport PDF. Vous pouvez arrêter un partage à tout moment depuis l’application.
+
+Le lien de partage du carnet est valable 7 jours. Il permet de consulter, en lecture seule : le nom, la race, l’âge et le poids de l’animal, ses numéros de puce et de passeport, ses allergies, la validité de son vaccin antirabique et ses 15 derniers événements de santé. Il ne donne accès ni à vos coordonnées ni à vos documents, et la page n’est pas référencée par les moteurs de recherche.
+
+Le site kytoapp.fr n’utilise aucun outil de mesure d’audience ni de publicité ; ses polices de caractères sont hébergées sur le site lui-même.</p></li>
       <li class="legal-section"><h2 class="section-heading">6. Conservation des données</h2><p class="section-copy">Données de compte et données de vos animaux : conservées tant que votre compte est actif
 En cas de suppression de compte (possible à tout moment depuis les réglages de l’application) : vos données et fichiers sont supprimés immédiatement de notre base ; les sauvegardes techniques sont purgées dans un délai maximum de 30 jours (sauf obligation légale de conservation plus longue)
 Données de facturation : conservées selon les obligations comptables (généralement 10 ans) ; elles sont détenues par Apple ou Google
-Logs techniques et rapports de plantage : durée limitée (généralement 12 mois maximum)</p></li>
+Logs techniques et rapports de plantage : durée limitée (généralement 12 mois maximum)
+Données gardées sur votre téléphone : à la déconnexion, les rappels programmés, les notifications et les fichiers temporaires (documents ouverts, photos, PDF) sont effacés de l’appareil ; à la suppression du compte, vos brouillons de documents et l’historique de vos messages au support le sont aussi</p></li>
       <li class="legal-section"><h2 class="section-heading">7. Vos droits (RGPD)</h2><p class="section-copy">Conformément au Règlement Général sur la Protection des Données, vous disposez des droits suivants :
 Droit d’accès
 Droit de rectification
@@ -247,14 +256,14 @@ Pour exercer vos droits, contactez-nous à : contact@kytoapp.fr
 Vous pouvez aussi supprimer votre compte et vos données directement dans l’application (Réglages).
 Nous répondrons dans un délai maximum d’un mois.
 Vous avez également le droit d’introduire une réclamation auprès de la CNIL (www.cnil.fr).</p></li>
-      <li class="legal-section"><h2 class="section-heading">8. Sécurité</h2><p class="section-copy">Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données (chiffrement des échanges, accès restreint aux données de chaque foyer, sauvegardes sécurisées, etc.).
+      <li class="legal-section"><h2 class="section-heading">8. Sécurité</h2><p class="section-copy">Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données (chiffrement des échanges, session de connexion chiffrée sur votre téléphone, accès aux données limité aux membres de chaque foyer, liens de partage et de réinitialisation du mot de passe à durée limitée, sauvegardes sécurisées, etc.).
 Cependant, aucune méthode de transmission ou de stockage n’est totalement infaillible.</p></li>
       <li class="legal-section"><h2 class="section-heading">9. Publicité et suivi</h2><p class="section-copy">Sans abonnement Kyto+, l’application affiche des publicités via Google AdMob sur l’écran d’accueil et sur la liste des rappels. Aucune publicité n’est affichée dans le carnet de santé, les documents, le partage ni le mode urgence.
 Au premier lancement, l’application vous demande votre consentement publicitaire (Europe) et l’autorisation de suivi (iOS). Si vous refusez, les publicités affichées ne sont pas personnalisées. Vous pouvez modifier votre choix à tout moment dans les réglages de votre téléphone. L’abonnement Kyto+ supprime les publicités.</p></li>
       <li class="legal-section"><h2 class="section-heading">10. Localisation et accès à la caméra</h2><p class="section-copy">L’accès à votre localisation et à la caméra n’est demandé que lorsque cela est nécessaire au fonctionnement d’une fonctionnalité.
 Vous pouvez à tout moment retirer ces autorisations dans les réglages de votre téléphone. Le retrait peut limiter certaines fonctionnalités (recherche de vétérinaires proches, ajout de photos).</p></li>
       <li class="legal-section"><h2 class="section-heading">11. Données des mineurs</h2><p class="section-copy">L’application est accessible à tout public. Si vous avez moins de 15 ans, vous devez obtenir l’autorisation de vos parents ou tuteurs légaux avant d’utiliser le Service.</p></li>
-      <li class="legal-section"><h2 class="section-heading">12. Transferts hors Union européenne</h2><p class="section-copy">Vos données de carnet (comptes, animaux, photos, documents) sont hébergées par Supabase en France (région de Paris, Union européenne). Certains de nos prestataires (notamment Apple, Google, Sentry et OneSignal) peuvent toutefois traiter des données hors de l’Union européenne. Dans ce cas, nous nous assurons que des garanties appropriées sont mises en place (clauses contractuelles types de la Commission européenne, etc.).</p></li>
+      <li class="legal-section"><h2 class="section-heading">12. Transferts hors Union européenne</h2><p class="section-copy">Vos données de carnet (comptes, animaux, photos, documents) sont hébergées par Supabase en France (région de Paris, Union européenne). Certains de nos prestataires (notamment Apple, Google, Sentry, OneSignal, Resend, Cloudflare et GitHub) peuvent toutefois traiter des données hors de l’Union européenne. Dans ce cas, nous nous assurons que des garanties appropriées sont mises en place (clauses contractuelles types de la Commission européenne, etc.).</p></li>
       <li class="legal-section"><h2 class="section-heading">13. Modification de la Politique de Confidentialité</h2><p class="section-copy">Nous pouvons modifier la présente Politique à tout moment.
 Toute modification substantielle vous sera notifiée via l’application ou par email.
 La version en vigueur est toujours celle publiée sur kytoapp.fr/confiden.</p></li>
